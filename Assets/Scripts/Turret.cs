@@ -1,16 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    [Header("Eneny Finding Mechanics")]
     public float range = 15f;
     public string enemyTag = "Enemy";
+    private Transform target;
 
+    [Header("Eneny Pursuit Mechanics")]
     public Transform partToRotate;
     public float turnSpeed = 10f;
-    
-    private Transform target;
+
+    [Header("Shooting Mechanics")]
+    public float fireRate = 1f;
+    private float fireCountdown = 0;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     // Use this for initialization
     void Start()
@@ -54,6 +62,23 @@ public class Turret : MonoBehaviour
         Quaternion lookRotatition = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotatition, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0, rotation.y, 0);
+
+        if (fireCountdown <= 0)
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+            bullet.Seek(target);
     }
 
     private void OnDrawGizmosSelected()
