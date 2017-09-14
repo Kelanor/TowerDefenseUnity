@@ -22,14 +22,14 @@ public class BuildManager : MonoBehaviour
     public GameObject standartTurretToBuild;
 
     private GameObject turretToBuild;
-
-    void Start()
-    {
-        turretToBuild = standartTurretToBuild;
-    }
-
+    
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }
