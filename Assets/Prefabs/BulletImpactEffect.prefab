@@ -3323,7 +3323,7 @@ ParticleSystemRenderer:
   m_GameObject: {fileID: 1835962956602208}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
