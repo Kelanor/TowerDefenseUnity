@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657785, g: 0.496413, b: 0.5748138, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641335, b: 0.57481396, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -354,6 +354,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed1850131e1540e4aa1aaccc47dec609, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &28608163 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+    type: 2}
+  m_PrefabInternal: {fileID: 1449306712}
 --- !u!1001 &29004556
 Prefab:
   m_ObjectHideFlags: 0
@@ -4095,6 +4100,7 @@ RectTransform:
   m_Children:
   - {fileID: 1915660336}
   - {fileID: 1816427038}
+  - {fileID: 28608163}
   m_Father: {fileID: 1353358566}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4175,6 +4181,9 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 1449592444051102, guid: 562c023d0144eb34892e8fe59fe5bb11, type: 2}
     cost: 250
+  laserBeamer:
+    prefab: {fileID: 1745654769788354, guid: 453f0f4f32ddec04cb31410a7553e622, type: 2}
+    cost: 350
 --- !u!1001 &577272291
 Prefab:
   m_ObjectHideFlags: 0
@@ -4507,7 +4516,7 @@ Prefab:
     - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 255.5
+      value: 174.5
       objectReference: {fileID: 0}
     - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
@@ -10670,6 +10679,151 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed1850131e1540e4aa1aaccc47dec609, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1449306712
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 573472596}
+    m_Modifications:
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 429.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114841060467706016, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 573472600}
+    - target: {fileID: 1821572722661730, guid: 66f676b37b9e9fd4c8ab514ad39ac793, type: 2}
+      propertyPath: m_Name
+      value: LaserBeamerItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114333381332473252, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d04019593347dae47aea91f41e02fd8a,
+        type: 3}
+    - target: {fileID: 114841060467706016, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLaserBeamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134576490121136, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_PreferredWidth
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134576490121136, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_PreferredHeight
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125653002043508, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_Text
+      value: $350
+      objectReference: {fileID: 0}
+    - target: {fileID: 224777870477602216, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 224777870477602216, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66f676b37b9e9fd4c8ab514ad39ac793, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1452528805 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4565062055879596, guid: ed1850131e1540e4aa1aaccc47dec609,
@@ -11867,7 +12021,7 @@ Prefab:
     - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 385.5
+      value: 304.5
       objectReference: {fileID: 0}
     - target: {fileID: 224202850382079172, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
@@ -11952,12 +12106,12 @@ Prefab:
     - target: {fileID: 224777870477602216, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000011444
+      value: 27.56
       objectReference: {fileID: 0}
     - target: {fileID: 224777870477602216, guid: 66f676b37b9e9fd4c8ab514ad39ac793,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -29.6
+      value: -26.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66f676b37b9e9fd4c8ab514ad39ac793, type: 2}
