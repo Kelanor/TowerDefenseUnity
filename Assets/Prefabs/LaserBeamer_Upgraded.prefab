@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114079485897041658}
   - component: {fileID: 120724368812966718}
   m_Layer: 0
-  m_Name: LaserBeamer
+  m_Name: LaserBeamer_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 1745654769788354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4435374210606664}
   - {fileID: 4368927323288184}
@@ -191,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662877325068428}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0.047, z: 0}
+  m_LocalPosition: {x: 0, y: -0.04919961, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 63.703358}
   m_Children: []
   m_Father: {fileID: 4121542084671820}
@@ -245,7 +245,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631712785685882}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.85519964, z: 0}
+  m_LocalPosition: {x: 0, y: 0.853, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4847362073797812}
@@ -266,9 +266,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 926bffe568389a74e9f14899ed592a15, type: 2}
-  - {fileID: 2100000, guid: ab45d572c573c8948a72d01bdb5bb9a3, type: 2}
-  - {fileID: 2100000, guid: 9ac57038394e3b4408c0185155a00f4a, type: 2}
+  - {fileID: 2100000, guid: 70849a1fd495315418d9494c84f7c608, type: 2}
+  - {fileID: 2100000, guid: dbb751465a220214cb0039a1ab0da096, type: 2}
+  - {fileID: 2100000, guid: 600c5a12cf0672d4283d3101fd3afc4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -300,8 +300,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: edefcd59e1e7aba49bc552ad3bbf2b63, type: 2}
-  - {fileID: 2100000, guid: 2ea2ad3c36f44624cbe545db342f3a7e, type: 2}
+  - {fileID: 2100000, guid: 4c3f2f14afe400a4d8ca02605b8c93fd, type: 2}
+  - {fileID: 2100000, guid: f3dd1592424bb7149ab7d9de446b081c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,7 +345,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.1544118, g: 1, b: 0.2652131, a: 1}
   m_Intensity: 3
-  m_Range: 10
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -381,12 +381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2bbc04ec9b827947b1f5d5ce8e22356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 30
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
-  slowModifier: 0.5
+  damageOverTime: 40
+  slowModifier: 0.8
   lineRenderer: {fileID: 120724368812966718}
   impactEffect: {fileID: 198286417623544712}
   impactLight: {fileID: 108645970027455076}
@@ -431,7 +431,7 @@ LineRenderer:
   - {x: 0, y: 3, z: 5}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.3
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -539,7 +539,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1486038924
+  randomSeed: -1975842890
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3807,7 +3807,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -721569555
+  randomSeed: -1570758685
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3959,8 +3959,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2
+      scalar: 4
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
